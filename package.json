@@ -7,6 +7,7 @@
   "author": "Dan Mercer <danielmercer1@gmail.com>",
   "license": "GPL-3.0-only",
   "private": true,
+  "packageManager": "yarn@1.22.19",
   "scripts": {
     "dev": "astro dev",
     "start": "astro dev",
@@ -16,6 +17,7 @@
   },
   "dependencies": {
     "@astrojs/check": "^0.3.4",
+    "@astrojs/cloudflare": "^8.0.1",
     "@astrojs/preact": "^3.1.0",
     "@preact/signals": "^1.2.1",
     "astro": "^4.1.0",
