@@ -6,7 +6,6 @@ import { computed, type Signal } from "@preact/signals";
 export function pure<A>(value: A): Signal<A> {
   console.log(`Created "pure" signal with value ${value}`);
   return computed(() => {
-    // TODO for some reason, this gets called twice for each signal - why?
     console.log(`Computed "pure" signal with value ${value}`);
     return value;
   });
@@ -29,10 +28,10 @@ export function flatMap<A, B>(
 }
 
 /**
- * Functor's map function. map(f) is equivalent to flatMap(a => pure(f(a))) because all Monads are Functors.
+ * Functor's map function.
  */
 export function map<A, B>(sa: Signal<A>, f: (a: A) => B): Signal<B> {
   return flatMap(sa, (a) => pure(f(a)));
-  // this would be more efficient, but I use the above to demonstrate the concepts
+  // this would be more efficient, but I use the above to demonstrate the concepts (the two implementations are functionally equivalent)
   // return computed(() => f(sa.value));
 }

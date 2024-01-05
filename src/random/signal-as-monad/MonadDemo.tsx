@@ -22,6 +22,7 @@ const usedHeapSize = signal<number | undefined>(undefined);
 export function MonadDemo() {
   return (
     <div>
+      <h1>Interactive demo</h1>
       <input
         type="text"
         defaultValue={message}
@@ -29,6 +30,13 @@ export function MonadDemo() {
       ></input>
       <pre>{messageWithLength}</pre>
       <hr />
+      <h1>Memory testing</h1>
+      <p>
+        Click the button below to rapidly change the <code>message</code> value
+        and see how the JS memory usage reacts. It may grow at first (due to
+        discarded objects) but they should be GC'd once the garbage collector
+        kicks in, so the memory should not grow unboundedly.
+      </p>
       <button
         onClick={() => {
           setInterval(() => {
@@ -43,7 +51,7 @@ export function MonadDemo() {
           }, 100);
         }}
       >
-        Start changing rapidly (to watch memory usage)
+        Start changing rapidly
       </button>
       <p>
         <code>performance.memory.usedJSHeapSize: {usedHeapSize}</code>
