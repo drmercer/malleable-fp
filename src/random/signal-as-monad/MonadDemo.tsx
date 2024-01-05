@@ -22,7 +22,7 @@ const usedHeapSize = signal<number | undefined>(undefined);
 export function MonadDemo() {
   return (
     <div>
-      <h1>Interactive demo</h1>
+      <h2>Interactive demo</h2>
       <input
         type="text"
         defaultValue={message}
@@ -30,7 +30,7 @@ export function MonadDemo() {
       ></input>
       <pre>{messageWithLength}</pre>
       <hr />
-      <h1>Memory testing</h1>
+      <h2>Memory testing</h2>
       <p>
         Click the button below to rapidly change the <code>message</code> value
         and see how the JS memory usage reacts. It may grow at first (due to

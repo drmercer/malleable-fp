@@ -9,6 +9,7 @@ import MonadFnsSourceCode from '../../random/signal-as-monad/monad?raw';
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width" />
 		<meta name="generator" content={Astro.generator} />
+    <title>Signals are monads!</title>
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 		<style>
 			html,
@@ -23,13 +24,14 @@ import MonadFnsSourceCode from '../../random/signal-as-monad/monad?raw';
 	</head>
 	<body>
 		<main>
+      <h1><a href="https://preactjs.com/blog/signal-boosting">Signals</a> are monads!</h1>
       <MonadDemo client:load />
       <hr/>
-      <h1>Source code</h1>
+      <h2>Source code</h2>
       <p><a href="https://github.com/drmercer/malleable-fp">View the whole project on GitHub</a></p>
-      <h2><code>MonadDemo.tsx</code></h2>
+      <h3><code>MonadDemo.tsx</code></h3>
       <pre>{MonadDemoSourceCode}</pre>
-      <h2><code>monad.ts</code></h2>
+      <h3><code>monad.ts</code></h3>
       <pre>{MonadFnsSourceCode}</pre>
 		</main>
 	</body>
